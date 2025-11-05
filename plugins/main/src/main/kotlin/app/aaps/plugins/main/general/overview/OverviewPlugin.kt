@@ -213,8 +213,10 @@ class OverviewPlugin @Inject constructor(
             if (config.COMMITTED) {
                 view.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.omniGrayColor))
                 view.alpha = 1.0f
+            //} else if (sp.getLong(rh.gs(app.aaps.core.utils.R.string.key_app_expiration) + "_" + config.VERSION_NAME, 0) != 0L) {
+                //view.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.metadataTextWarningColor))
             } else if (sp.getLong(rh.gs(app.aaps.core.utils.R.string.key_app_expiration) + "_" + config.VERSION_NAME, 0) != 0L) {
-                view.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.metadataTextWarningColor))
+                view.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.omniGrayColor))
             } else {
                 view.setTextColor(rh.gac(context, app.aaps.core.ui.R.attr.urgentColor))
             }
